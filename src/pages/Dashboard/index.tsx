@@ -1,7 +1,17 @@
 import React from 'react';
 
-import { Title } from './styles';
+import logoImg from '../../assets/logo.svg';
+import { Title, Form } from './styles';
 
 export const Dashboard: React.FC = () => {
-  return <Title>Explore repositórios no github</Title>;
+  return (
+    <>
+      <img src={logoImg} alt="logo" />
+      <Title>Explore repositórios no github</Title>
+      <Form>
+        <input placeholder="Digite o nome do repositório" />
+        <button type="submit">Pesquisar</button>
+      </Form>
+    </>
+  );
 };
